@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | CareTransit Launch Partners</title>
+  <meta name="description" content="Contact CareTransit Launch Partners about launching a medical transportation business — state requirements, funding readiness, credentialing support, and strategy calls." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta property="og:image" content="assets/logo-full.png" />
+  <meta name="theme-color" content="#0c1c2c" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar" data-component="header"></header>
+
+  <main id="main">
+    <!-- Intro + live hours -->
+    <section class="hero contact-hero section" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">CONTACT CARETRANSIT</p>
+        <h1 class="page-title">Talk to a launch advisor.</h1>
+        <p class="lead">Tell us where you plan to operate and where you are today. We’ll reply with the likely next steps for your medical transportation launch.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact-form">Send a Message</a>
+          <a class="btn ghost" data-bind="phoneLink" href="#">Call Us</a>
+        </div>
+      </div>
+      <aside class="hero-card contact-card" aria-label="Office hours">
+        <div>
+          <p class="kicker light-kicker">OFFICE HOURS</p>
+          <div class="status-badge" id="open-status"><i></i><span>Checking hours…</span></div>
+          <p class="status-sub" id="local-time"></p>
+        </div>
+        <div class="dashboard">
+          <div data-render="hours"></div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Direct contact methods -->
+    <section class="section light compact-light">
+      <div class="method-grid">
+        <article class="method">
+          <b>Email</b>
+          <a class="method-value" data-bind="emailLink" href="#"></a>
+          <button class="copy-btn" type="button" data-copy="email">Copy email</button>
+        </article>
+        <article class="method">
+          <b>Phone</b>
+          <a class="method-value" data-bind="phoneLink" href="#"></a>
+          <button class="copy-btn" type="button" data-copy="phone">Copy number</button>
+        </article>
+        <article class="method">
+          <b>Office</b>
+          <address class="method-value" data-bind="location"></address>
+          <span class="method-note" data-bind="serviceArea"></span>
+          <a class="copy-btn" data-bind="mapsLink" href="#" target="_blank" rel="noopener">Get directions</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section id="contact-form" class="section apply">
+      <div class="apply-card">
+        <div>
+          <p class="eyebrow">SEND US A MESSAGE</p>
+          <h2>What would you like to talk about?</h2>
+          <p>The more you share about your state, service model, and stage, the more specific our first reply can be.</p>
+          <ol class="next-steps" data-render="nextSteps"></ol>
+        </div>
+
+        <form class="js-form contact-form" data-form="contact" novalidate>
+          <fieldset class="topic-field">
+            <legend>Topic</legend>
+            <div class="chips" data-render="topics"></div>
+          </fieldset>
+          <div class="two">
+            <label>First name<input required name="first" autocomplete="given-name"></label>
+            <label>Last name<input required name="last" autocomplete="family-name"></label>
+          </div>
+          <div class="two">
+            <label>Email<input required type="email" name="email" autocomplete="email"></label>
+            <label><span>Phone <span class="opt">optional</span></span><input type="tel" name="phone" autocomplete="tel"></label>
+          </div>
+          <div class="two">
+            <label>State<select name="state" data-render="stateOptions"><option value="">Choose a state</option></select></label>
+            <label>Current stage<select name="stage" data-render="stageOptions"></select></label>
+          </div>
+          <fieldset class="inline-field">
+            <legend>Best way to reach you</legend>
+            <div class="radios">
+              <label class="radio"><input type="radio" name="contactMethod" value="Email" checked> Email</label>
+              <label class="radio"><input type="radio" name="contactMethod" value="Phone"> Phone</label>
+              <label class="radio"><input type="radio" name="contactMethod" value="Text"> Text</label>
+            </div>
+          </fieldset>
+          <label>Message
+            <textarea required name="message" rows="5" maxlength="1200" placeholder="Tell us about your launch goals, timeline, and any questions."></textarea>
+            <span class="counter" data-counter>0 / 1200</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="consent" required>
+            <span>I agree to be contacted about my inquiry. I understand CareTransit does not guarantee approvals, funding, contracts, or revenue.</span>
+          </label>
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn primary wide" type="submit">Send Message</button>
+          <p class="form-note" data-form-note></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section dark" id="faq">
+      <div class="section-head narrow">
+        <p class="eyebrow">BEFORE YOU REACH OUT</p>
+        <h2>Common questions.</h2>
+        <p>Quick answers to what new owners ask most. Don’t see yours? Send it in the form above.</p>
+      </div>
+      <div class="faq-list" data-render="faqs"></div>
+    </section>
+  </main>
+
+  <footer data-component="footer"></footer>
+
+  <noscript><p class="noscript">Please enable JavaScript to view the full CareTransit Launch Partners website.</p></noscript>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

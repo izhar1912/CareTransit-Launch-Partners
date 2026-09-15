@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CareTransit Launch Partners | Build & Launch Your Medical Transportation Business</title>
+  <meta name="description" content="Business launch, compliance roadmap, funding readiness, vehicle strategy, website, operations, and credentialing support for medical transportation entrepreneurs." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta property="og:image" content="assets/logo-full.png" />
+  <meta name="theme-color" content="#0c1c2c" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar" data-component="header"></header>
+
+  <main id="main">
+    <section class="hero section" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">MEDICAL TRANSPORTATION BUSINESS DEVELOPMENT</p>
+        <h1>Build the business behind the vehicle.</h1>
+        <p class="lead">We help aspiring owners turn a medical transportation idea into a structured, launch-ready company—with a state-specific roadmap, operational systems, vehicle strategy, funding readiness, branding, website development, and credentialing support.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#apply">Start Your Launch Plan</a>
+          <a class="btn ghost" href="#what-we-build">See What’s Included</a>
+        </div>
+        <div class="proof-strip">
+          <span>Business Foundation</span><span>Compliance Roadmap</span><span>Operations</span><span>Growth Systems</span>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Launch roadmap overview">
+        <div class="route" data-render="heroRoute"></div>
+        <div class="dashboard">
+          <p class="kicker">YOUR LAUNCH COMMAND CENTER</p>
+          <div data-render="heroDashboard"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust section compact">
+      <p>Built for entrepreneurs who want more than a checklist.</p>
+      <div class="trust-grid" data-render="trust"></div>
+    </section>
+
+    <section id="what-we-build" class="section light">
+      <div class="section-head">
+        <p class="eyebrow">WHAT WE BUILD WITH YOU</p>
+        <h2>Not a “business setup.” A launch infrastructure.</h2>
+        <p>Our role is to help reduce guesswork, organize the launch sequence, and create the operational foundation needed to pursue medical transportation work professionally.</p>
+      </div>
+      <div class="cards" data-render="services"></div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="section-head narrow">
+        <p class="eyebrow">THE CARETRANSIT LAUNCH METHOD</p>
+        <h2>A build sequence designed to prevent expensive out-of-order decisions.</h2>
+      </div>
+      <div class="timeline" data-render="phases" aria-label="Launch phases"></div>
+      <div class="phase-outcome" id="phase-outcome" aria-live="polite"></div>
+    </section>
+
+    <section id="states" class="section dark">
+      <div class="section-head">
+        <p class="eyebrow">STATE-SPECIFIC LAUNCH SUPPORT</p>
+        <h2>We start with the rules—not the logo.</h2>
+        <p>Medical transportation requirements vary by state, payer, vehicle type, service level, and locality. Our launch roadmap is built around the client's actual operating model.</p>
+      </div>
+      <div class="state-check">
+        <label for="state-lookup">Where do you plan to operate?</label>
+        <div class="state-check-row">
+          <select id="state-lookup" data-render="stateOptions"><option value="">Choose a state</option></select>
+          <p id="state-result" aria-live="polite">Pick a state to see how we can support your launch.</p>
+        </div>
+      </div>
+      <div class="state-grid" data-render="states"></div>
+    </section>
+
+    <section id="revenue" class="section light">
+      <div class="section-head narrow">
+        <p class="eyebrow">THE REVENUE PATH</p>
+        <h2>Build toward strong monthly gross revenue—without pretending every market pays the same.</h2>
+        <p>Use this planning calculator to model gross revenue from completed one-way trips. It is a business-planning illustration, not an earnings promise. Actual rates, trip volume, denials, deadhead miles, payroll, fuel, insurance, maintenance, software, taxes, and other costs can materially change results.</p>
+      </div>
+      <div class="calculator-wrap">
+        <div class="calc-inputs">
+          <label>Completed one-way trips per day
+            <input id="trips" type="number" min="0" max="60" step="1">
+            <input class="range" data-sync="trips" type="range" min="0" max="40" step="1" aria-label="Trips per day slider">
+          </label>
+          <label>Average collected revenue per trip
+            <span class="money-input"><span>$</span><input id="rate" type="number" min="0" max="500" step="1"></span>
+            <input class="range" data-sync="rate" type="range" min="20" max="200" step="1" aria-label="Revenue per trip slider">
+          </label>
+          <label>Operating days per month
+            <input id="days" type="number" min="0" max="31" step="1">
+            <input class="range" data-sync="days" type="range" min="0" max="31" step="1" aria-label="Operating days slider">
+          </label>
+        </div>
+        <div class="calc-result">
+          <span>Illustrative monthly gross revenue</span>
+          <strong id="monthly" aria-live="polite">$0</strong>
+          <small id="formula"></small>
+        </div>
+      </div>
+      <div class="scenario-row" data-render="scenarios"></div>
+      <p class="fineprint">These examples show gross revenue math only and are not claims that a new business will receive these rates or trip volumes. Net profit is lower after expenses. Contracted reimbursement and private-pay pricing vary by payer, geography, vehicle/service level, and agreement.</p>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="eyebrow">VEHICLE STRATEGY</p>
+        <h2>Know what you need before you shop.</h2>
+        <p>Buying a vehicle too early can lock an owner into the wrong service level or create rework during enrollment. We help clients build a pre-purchase decision sheet based on intended trips, accessibility needs, payer requirements, insurance, inspection needs, and anticipated operating costs.</p>
+        <ul class="checklist" data-render="vehicleChecklist"></ul>
+      </div>
+      <div class="visual-panel">
+        <div class="vehicle-card" data-render="vehicleFit" data-append>
+          <span>PRE-PURCHASE REVIEW</span>
+          <h3>Vehicle Fit Check</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="funding" class="section dark">
+      <div class="section-head narrow">
+        <p class="eyebrow">FUNDING READINESS</p>
+        <h2>We help you become fundable. The lender makes the decision.</h2>
+        <p>Funding is strongest when the business has a coherent plan, realistic use of funds, documented startup costs, and defensible projections. We help prepare that package and identify potential financing channels.</p>
+      </div>
+      <div class="funding-grid" data-render="funding"></div>
+      <p class="fineprint inverse">We do not guarantee financing, grants, loan approval, credit outcomes, payer contracts, or reimbursement.</p>
+    </section>
+
+    <section class="section light">
+      <div class="section-head narrow">
+        <p class="eyebrow">WHO THIS IS FOR</p>
+        <h2>You bring the ownership mindset. We help build the launch system.</h2>
+      </div>
+      <div class="qualify" data-render="qualify"></div>
+    </section>
+
+    <section id="apply" class="section apply">
+      <div class="apply-card">
+        <div>
+          <p class="eyebrow">START WITH A LAUNCH STRATEGY CALL</p>
+          <h2>Tell us the state, service model, and where you are today.</h2>
+          <p>We’ll use the consultation to identify your likely launch path, major dependencies, and what should happen next.</p>
+          <p class="apply-alt">Have a different question? <a href="contact.html">Visit the contact page</a> or email <a data-bind="email" href="#"></a>.</p>
+        </div>
+        <form class="js-form" data-form="strategy-call" novalidate>
+          <div class="two">
+            <label>First name<input required name="first" autocomplete="given-name"></label>
+            <label>Last name<input required name="last" autocomplete="family-name"></label>
+          </div>
+          <label>Email<input required type="email" name="email" autocomplete="email"></label>
+          <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+          <div class="two">
+            <label>State<select name="state" data-render="stateOptions"><option value="">Choose a state</option></select></label>
+            <label>Current stage<select name="stage" data-render="stageOptions"></select></label>
+          </div>
+          <label>What do you need help with?<textarea name="message" rows="4" placeholder="Tell us about your launch goals..."></textarea></label>
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn primary wide" type="submit">Request My Strategy Call</button>
+          <p class="form-note" data-form-note></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer data-component="footer"></footer>
+
+  <noscript><p class="noscript">Please enable JavaScript to view the full CareTransit Launch Partners website.</p></noscript>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
