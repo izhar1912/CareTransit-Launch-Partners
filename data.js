@@ -52,6 +52,7 @@ window.SITE = {
     { label: "States",            href: "#states" },
     { label: "Revenue Path",      href: "#revenue" },
     { label: "Funding Readiness", href: "#funding" },
+    { label: "Client Intake",     href: "intake.html", page: "intake" },
     { label: "Contact",           href: "contact.html", page: "contact" }
   ],
   navCta: { label: "Book a Strategy Call", href: "#apply" },
@@ -87,10 +88,10 @@ window.SITE = {
       includes: ["Driver file templates", "Onboarding checklist", "Vehicle & maintenance logs", "Incident & complaint forms", "Compliance tracker"] },
     { title: "Dispatch & Technology", text: "Support selecting scheduling/dispatch software, business phone, email, document storage, trip documentation, invoicing workflow, and mileage/GPS processes.",
       includes: ["Dispatch software shortlist", "Phone & email setup", "Trip documentation flow", "Invoicing workflow", "Mileage / GPS process"] },
-    { title: "Credentialing Support", text: "Preparation and tracking for applicable Medicaid, broker, MCO, facility, or network applications. We help resolve deficiencies and organize documentation; all applications are subject to approval.",
+    { title: "Credentialing Support", text: "Preparation and tracking for applicable Medicaid, broker, MCO, facility, or network applications. We help resolve deficiencies and organize documentation; approvals are never guaranteed.",
       includes: ["Application preparation", "Status tracking", "Deficiency response support", "Document organization"] },
     { title: "Brand & Website Launch", text: "Professional brand direction, customer-facing website, inquiry flow, capability statement, referral materials, and credibility assets for facilities and private-pay clients.",
-      includes: ["Brand direction", "Customer-facing website", "Inquiry flow", "Capability statement", "Referral materials", "Website systems management"] },
+      includes: ["Brand direction", "Customer-facing website", "Inquiry flow", "Capability statement", "Referral materials"] },
     { title: "Funding Readiness", text: "Business-plan support, startup budget, use-of-funds plan, financial projections, lender-ready documentation, and assistance identifying potential financing sources.",
       includes: ["Business plan support", "Startup budget", "Use-of-funds plan", "Financial projections", "Funding-source research"] }
   ],
@@ -157,7 +158,7 @@ window.SITE = {
     "You understand that approval, funding, contracts, and revenue depend on third parties and market execution."
   ],
 
-  stages: ["Getting Started", "Business already formed", "Vehicle purchased", "Already operating"],
+  stages: ["Researching", "Business already formed", "Vehicle purchased", "Already operating"],
 
   /* ---------- Contact page */
   topics: [
@@ -173,6 +174,12 @@ window.SITE = {
     { title: "We read your note", text: "A launch advisor reviews your state, stage, and goals." },
     { title: "We reply with a path", text: "You get a short reply with likely next steps and any questions we have." },
     { title: "We schedule a call", text: "If it's a fit, we book a strategy call to map your launch sequence." }
+  ],
+
+  thanksSteps: [
+    { title: "We review your intake", text: "A launch advisor reads your answers, state requirements, and current stage." },
+    { title: "We reach out", text: "Expect a call, text, or email using your preferred method within one business day." },
+    { title: "We map your launch", text: "On your strategy call we walk through your likely launch path and next steps." }
   ],
 
   faqs: [

@@ -32,7 +32,9 @@
     if (!el) return;
     const cta = isHome
       ? `<a class="nav-cta" href="${esc(S.navCta.href)}">${esc(S.navCta.label)}</a>`
-      : `<a class="nav-cta" href="#contact-form" data-topic="strategy">${esc(S.navCta.label)}</a>`;
+      : page === 'contact'
+        ? `<a class="nav-cta" href="#contact-form" data-topic="strategy">${esc(S.navCta.label)}</a>`
+        : `<a class="nav-cta" href="${esc(resolve(S.navCta.href))}">${esc(S.navCta.label)}</a>`;
     el.innerHTML = `
       <a class="brand" href="${isHome ? '#top' : 'index.html'}" aria-label="${esc(S.brand.legalName)} home">${brandInner}</a>
       <button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -91,6 +93,7 @@
           <a href="tel:${esc(S.contact.phoneHref)}">${esc(S.contact.phone)}</a>
           <a href="${esc(mapsUrl)}" target="_blank" rel="noopener">${esc(S.contact.location)}</a>
           <a href="${esc(resolve('#apply'))}">Book a strategy call</a>
+          <a href="intake.html">Client intake</a>
           <a href="contact.html">Contact page</a>
         </div>
         <div>
@@ -163,6 +166,8 @@
       rows.push(`<div class="dash-row tz-row"><span>All times</span><strong>${esc(S.contact.timezoneLabel)}</strong></div>`);
       return rows.join('');
     },
+
+    thanksSteps: () => S.thanksSteps.map((s) => `<li><b>${esc(s.title)}</b><span>${esc(s.text)}</span></li>`).join(''),
 
     nextSteps: () => S.nextSteps.map((s) => `<li><b>${esc(s.title)}</b><span>${esc(s.text)}</span></li>`).join(''),
 
@@ -469,6 +474,7 @@
       const isContact = form.dataset.form === 'contact';
       const draftKey = 'ct-draft-' + form.dataset.form;
       const doneTitle = isContact ? 'Message sent' : 'Strategy call requested';
+      const demoNote = 'Demo mode: add your Google Apps Script URL in data.js to receive submissions.';
 
       const setNote = (text, tone) => { note.textContent = text; note.dataset.tone = tone || ''; };
       setNote(S.forms.endpoint ? '' : demoNote);

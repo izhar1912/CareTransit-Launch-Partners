@@ -7,6 +7,10 @@ states and FAQs can be updated in one place.
 ## Files
 - `index.html` — home page (layout shell; repeatable sections render from data.js)
 - `contact.html` — contact page: live office-hours status, contact methods, full inquiry form, FAQ
+- `intake.html` — multi-step client intake (10 sections, New Jersey/Illinois sections appear only when those states are selected)
+- `thank-you.html` — confirmation page after the intake, with a printable copy of the visitor's answers
+- `intake-schema.js` — every intake section and question (edit questions here)
+- `intake.js` — intake form engine: steps, conditions, validation, save-and-resume, review, submit
 - `data.js` — **all editable content and settings** (brand, contact info, hours, nav, services, phases, states, calculator, FAQs, footer)
 - `script.js` — shared header/footer, content rendering, and all interactions
 - `styles.css` — original styles, plus a clearly marked "Dynamic site additions" block at the end
@@ -28,9 +32,10 @@ Open `index.html` in any modern browser (works from disk or any static host).
 - Forms: inline validation, spam honeypot, loading and success states, error messaging
 - Contact form: topic chips, URL pre-fill (`contact.html?topic=state&state=Texas`), character counter, unsent-draft memory in the browser
 - FAQ accordion
+- Client intake: progress rail, conditional follow-up questions and state sections, add-another lists (owners, facilities, opportunities), ownership % check, "Other, please specify" fields, per-step validation, autosave with resume on the same device, full review with Edit links, and a thank-you page with a printable copy
 
 ## Connecting the forms (required before launch)
-Submissions are saved to a Google Sheet and emailed to intake@caretransitlaunchpartners.com
+Submissions from all three forms are saved to a Google Sheet and emailed to intake@caretransitlaunchpartners.com
 through a Google Apps Script. Follow `FORMS-SETUP.md`, then paste the web app URL
 into `forms.endpoint` in `data.js`. While it is empty, the forms run in demo mode:
 they validate and confirm, but send nothing.

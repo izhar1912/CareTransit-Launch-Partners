@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You | CareTransit Launch Partners</title>
+  <meta name="description" content="Your CareTransit Launch Partners client intake was received." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta property="og:image" content="assets/logo-full.png" />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0c1c2c" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="thanks">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar" data-component="header"></header>
+
+  <main id="main">
+    <section class="hero section thanks-hero" id="top">
+      <div class="hero-copy" id="thanks-app">
+        <span class="success-mark big" aria-hidden="true">✓</span>
+        <p class="eyebrow">INTAKE RECEIVED</p>
+        <h1 class="page-title">Thank you<span data-thanks="name"></span>.</h1>
+        <p class="lead">Your client intake is with our launch team. We’ll review your answers and reach out to schedule your launch strategy call.</p>
+        <p class="thanks-demo" hidden>Demo mode: nothing was sent. Add your Google Apps Script URL in data.js to go live.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="index.html">Back to Home</a>
+          <a class="btn ghost" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <aside class="hero-card thanks-card" aria-label="What happens next">
+        <p class="kicker light-kicker">WHAT HAPPENS NEXT</p>
+        <ol class="next-steps on-dark" data-render="thanksSteps"></ol>
+        <div class="dashboard thanks-receipt" hidden>
+          <div class="dash-row"><span>Received</span><strong data-thanks="time"></strong></div>
+          <div class="dash-row"><span>We’ll reply to</span><strong data-thanks="email"></strong></div>
+          <div class="dash-row"><span>Service states</span><strong data-thanks="states"></strong></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section light thanks-copy" hidden>
+      <div class="thanks-copy-head">
+        <div>
+          <p class="eyebrow">YOUR ANSWERS</p>
+          <h2>Keep a copy for your records.</h2>
+        </div>
+        <div class="thanks-copy-actions">
+          <button type="button" class="btn ghost" data-summary-toggle aria-expanded="false" aria-controls="thanks-summary">View my answers</button>
+          <button type="button" class="btn primary" data-print>Print or save as PDF</button>
+        </div>
+      </div>
+      <div id="thanks-summary" class="review-body" hidden></div>
+    </section>
+  </main>
+
+  <footer data-component="footer"></footer>
+
+  <noscript><p class="noscript">Please enable JavaScript to use the CareTransit client intake.</p></noscript>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script src="intake-schema.js"></script>
+  <script src="intake.js"></script>
+</body>
+</html>
